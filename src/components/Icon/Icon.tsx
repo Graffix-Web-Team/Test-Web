@@ -1,0 +1,77 @@
+import { createElement, ReactElement } from 'react';
+import { BiCoffeeTogo, BiSolidSushi } from 'react-icons/bi';
+import { BsSignpost2Fill } from 'react-icons/bs';
+import { CgPill, CgPokemon } from 'react-icons/cg';
+import {
+  FaBalanceScale,
+  FaBullhorn,
+  FaDog,
+  FaDumbbell,
+  FaGamepad,
+  FaIceCream,
+  FaMusic,
+  FaPaintBrush,
+  FaPaperPlane,
+  FaPizzaSlice,
+  FaRunning,
+  FaUmbrellaBeach,
+} from 'react-icons/fa';
+import { FaMountainSun, FaPlateWheat } from 'react-icons/fa6';
+import {
+  GiBabyBottle,
+  GiRiceCooker,
+  GiRollerSkate,
+  GiStrawberry,
+  GiTacos,
+} from 'react-icons/gi';
+import { IoMdFlower } from 'react-icons/io';
+import { ImSpoonKnife } from 'react-icons/im';
+import { LuCakeSlice, LuSoup } from 'react-icons/lu';
+import { MdCake, MdSoupKitchen, MdSportsBasketball } from 'react-icons/md';
+import { TbMickeyFilled, TbStairsUp } from 'react-icons/tb';
+interface IconProps {
+  iconName: string;
+  size?: string;
+}
+
+export const Icon = ({ iconName, size }: IconProps): ReactElement => {
+  // Define an object to map icon names to their corresponding components
+  const iconComponents: { [key: string]: ReactElement } = {
+    BiCoffeeTogo: createElement(BiCoffeeTogo, { size }),
+    BsSignpost2Fill: createElement(BsSignpost2Fill, { size }),
+    BiSolidSushi: createElement(BiSolidSushi, { size }),
+    CgPill: createElement(CgPill, { size }),
+    CgPokemon: createElement(CgPokemon, { size }),
+    FaBalanceScale: createElement(FaBalanceScale, { size }),
+    FaIceCream: createElement(FaIceCream, { size }),
+    FaDog: createElement(FaDog, { size }),
+    FaPaintBrush: createElement(FaPaintBrush, { size }),
+    FaUmbrellaBeach: createElement(FaUmbrellaBeach, { size }),
+    FaBullhorn: createElement(FaBullhorn, { size }),
+    FaDumbbell: createElement(FaDumbbell, { size }),
+    FaGamepad: createElement(FaGamepad, { size }),
+    FaMountainSun: createElement(FaMountainSun, { size }),
+    FaMusic: createElement(FaMusic, { size }),
+    FaPaperPlane: createElement(FaPaperPlane, { size }),
+    FaPizzaSlice: createElement(FaPizzaSlice, { size }),
+    FaPlateWheat: createElement(FaPlateWheat, { size }),
+    FaRunning: createElement(FaRunning, { size }),
+    GiBabyBottle: createElement(GiBabyBottle, { size }),
+    GiRiceCooker: createElement(GiRiceCooker, { size }),
+    GiRollerSkate: createElement(GiRollerSkate, { size }),
+    GiStrawberry: createElement(GiStrawberry, { size }),
+    GiTacos: createElement(GiTacos, { size }),
+    ImSpoonKnife: createElement(ImSpoonKnife, { size }),
+    IoMdFlower: createElement(IoMdFlower, { size }),
+    LuCakeSlice: createElement(LuCakeSlice, { size }),
+    LuSoup: createElement(LuSoup, { size }),
+    MdCake: createElement(MdCake, { size }),
+    MdSportsBasketball: createElement(MdSportsBasketball, { size }),
+    MdSoupKitchen: createElement(MdSoupKitchen, { size }),
+    TbMickeyFilled: createElement(TbMickeyFilled, { size }),
+    TbStairsUp: createElement(TbStairsUp, { size }),
+  };
+
+  // Render the corresponding icon component based on the iconName prop
+  return iconComponents[iconName];
+};
